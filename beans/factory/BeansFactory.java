@@ -9,8 +9,16 @@ package main.mini_spring.beans.factory;
  */
 public interface BeansFactory {
 
-    // 先创建bean
+    // 创建bean
+    Object createBean(Class<?> clazz, String name);
 
+    // 获取bean
+    Object getBean(String beanName);
 
+    // 销毁bean
+    Boolean destroyBean(String beanName);
+
+    // 注册bean
+    Boolean registerBean(String name, Object bean);
 
 }
